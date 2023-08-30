@@ -19,8 +19,22 @@ public class MinMax {
         return max;
     }
 
+    public int minNumber(int num1, int num2, int num3) {
+        int [] numbers = {num1, num2, num3};
+        return minNumber(numbers);
+    }
+    public int minNumber(int [] numbers) {
+        int  min=numbers[0]; //디폴트값
+        for(int i=1;i<numbers.length;i++) {
+            if(min>numbers[i])
+                min=numbers[i];
+        }
+        return min;
+    }
+
     public static void main(String[] args) {
         System.out.println(new MinMax().maxNumber(1,2,3));
+        System.out.println(new MinMax().minNumber(1,2,3));
     }
 
 
